@@ -1,0 +1,113 @@
+[fire]
+results_path = "signal_task/results/fire"
+image_file_suffix = "_merged.tif"
+label_file_suffix = ".mask.tif"
+# This prefix needs more context / documentation.
+prefix = -11
+wave_list = [0.48, 0.56, 0.65, 0.865, 1.61, 2.2]
+[fire.dataloader]
+in_seq_length = 1
+img_size = 224
+target_size = 512
+val_ratio = 0.1
+batch_size = 6
+bootstrapping = false
+[fire.normalization]
+means=[0.033349706741586264,
+       0.05701185520536176,
+       0.05889748132001316,
+       0.2323245113436119,
+       0.1972854853760658,
+       0.11944914225186566,
+]
+stds=[0.02269135568823774,
+      0.026807560223070237,
+      0.04004109844362779,
+      0.07791732423672691,
+      0.08708738838140137,
+      0.07241979477437814,
+]
+[fire.model]
+input_dim = 6
+output_dim = 2
+name = "ssl4eo"
+[fire.train]
+lr = 5e-5
+weight_decay = 5e-6
+num_epochs = 50
+loss = 'dice'
+patience = 10
+warmup_epochs = 3
+
+[flood]
+results_path = "signal_task/results/flood"
+[flood.dataloader]
+train_test_split_file = "train_test_split_from_csv.json"
+windows_file = "/data/worldfloods/window_file.json"
+input_folder = "S2"
+target_folder = "gt"
+img_size = 256
+target_size = 256
+batch_size = 1
+num_workers = 8
+bootstrapping = false
+filter_windows_version = "v2"
+filter_windows_threshold = 0.1
+filter_windows_apply = true
+download = false
+channel_configuration = "all"
+normalize_train = true
+normalize_test = true
+model_input_size = 224
+add_mndwi_input = false
+[flood.model]
+input_dim = 13
+output_dim = 2
+[flood.train]
+lr = 5e-5
+weight_decay = 5e-6
+num_epochs = 50
+loss = 'dice'
+patience = 5
+warmup_epochs = 3
+normalization =[[3787.0604973, 2634.44474043],
+        [3758.07467509, 2794.09579088],
+        [3238.08247208, 2549.4940614],
+        [3418.90147615, 2811.78109878],
+        [3450.23315812, 2776.93269704],
+        [4030.94700446, 2632.13814197],
+        [4164.17468251, 2657.43035126],
+        [3981.96268494, 2500.47885249],
+        [4226.74862547, 2589.29159887],
+        [1868.29658114, 1820.90184704],
+        [399.3878948, 761.3640411],
+        [2391.66101119, 1500.02533014],
+        [1790.32497137, 1241.9817628],
+    ]
+[landslide]
+results_path =  "signal_task/results/landslide"
+[landslide.dataloader]
+img_size = 224
+target_size = 64
+batch_size = 7
+bootstrapping = true
+[landslide.train]
+lr = 5e-5
+weight_decay = 5e-6
+num_epochs = 50
+loss = 'dice'
+patience = 10
+warmup_epochs = 3
+means =[744.9594170706613, 1046.9983209882464, 941.2134448460171, 1474.7787829807826, 2845.864118848528, 3249.9882033211843, 3342.958016531808, 1935.697322845459, 1199.270334516253, 3421.104910169329]
+stds = [1118.0480301602838, 1053.4351699204744, 1108.372161450173, 1020.5004347075213, 1225.2402466443496, 1392.9090087359464, 1444.7340928701221, 741.6066552930844, 585.4973810484465, 1429.516700657488]
+
+
+[evaluation]
+plot_pairwise_plot = false
+
+[evaluation.worldmap]
+plot = false
+get_max_min = false
+plot_max_min = false
+metrics_list = ['F1', 'IoU', 'ECE','Accuracy','Probability', 'Probability_pred_scaled', 'Probability_support_scaled', 'Entropy', 'Entropy_pred_scaled', 'Entropy_support_scaled', 'Variance', 'Variance_support_scaled', 'Variance_pred_scaled', 'Mutual Information', 'Mutual Information_support_scaled', 'Mutual Information_pred_scaled']#, 'SUB_AREA','inu_pc_smn','inu_pc_smx', 'ria_ha_ssu','Elevation (avg)','ele_mt_smn','Elevation (max)','Terrain Slope','snw_pc_syr','snw_pc_smx','glc_cl_smj','Wetland Extent (class 1)','Wetland Extent (class 2)','Forest Cover Extent','Cropland Extent','Pasture Extent','ire_pc_sse','urb_pc_sse','hft_ix_s09'] # []
+# ['F1']#, 'Elevation (avg)', 'Cropland Extent','Pasture Extent', 'ria_ha_ssu', 'IoU']

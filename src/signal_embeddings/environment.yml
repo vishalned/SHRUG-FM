@@ -1,0 +1,53 @@
+
+name: fm_extremes_new
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.11
+  - libgcc-ng
+  - libstdcxx-ng
+  - faiss-cpu=1.11.0
+  - pip
+  - pip:
+    - antimeridian==0.4.1
+    - blosc==1.11.3
+    - braceexpand==0.1.7
+    - Cython==3.1.2
+    - dynaconf==3.2.11
+    - geopandas==1.0.1
+    - global-land-mask==1.0.0
+    - h3==4.3.0
+    - hdbscan==0.8.40
+    - loguru==0.7.3
+    - matplotlib==3.10.3
+    - ml4floods>=1.0.0
+    - numba==0.61.2
+    - numpy==1.26.4
+    - opencv-python==4.11.0.86
+    - pandas==2.3.1
+    - pyproj==3.7.1
+    - PyWavelets==1.8.0
+    - requests==2.32.4
+    - scikit-learn==1.7.0
+    - seaborn==0.13.2
+    - shapely==2.1.1
+    - terratorch==1.0.2
+    - toml==0.10.2
+    - torch==2.7.0
+    - torchgeo==0.7.0
+    - torchvision==0.22.0
+    - tqdm==4.67.1
+    - transformers==4.53.1
+    - wandb==0.21.0
+    - webdataset==1.0.2
+    - zarr==3.1.0
+    - --extra-index-url https://download.pytorch.org/whl/cu124
+    # Development dependencies
+    - autoflake==2.3.1
+    - black==25.1.0
+    - detect-secrets==1.5.0
+    - isort==6.0.0
+    - pre-commit==4.2.0
+    - pylint==3.3.4

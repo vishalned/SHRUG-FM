@@ -1,0 +1,5 @@
+[default]
+debug = false
+user_path = "/"
+data_path = "data/databases/hls_burnscars" # Can't have / at start
+checkpoint_path = "checkpoints" # Can't have / at start

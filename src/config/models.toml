@@ -1,0 +1,412 @@
+[trained_models]
+
+[trained_models.fire]
+
+[trained_models.fire.ssl4eo_MAE]
+
+[trained_models.fire.ssl4eo_MAE.ensemble]
+checkpoint_path = "/home/kai-h/extremes-checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation"
+mode = "frozen_body"
+ssl_method = "MAE"
+
+[trained_models.fire.ssl4eo_MAE.ensemble.debug]
+id = 'ssl4eo_MAE_ensemble_debug'
+model_chkpt = [ "best_model_25_2025-07-09-11-53/best_model_25_2025-07-09-11-53.pth",
+        "best_model_46_2025-07-08-21-42/best_model_46_2025-07-08-21-42.pth"]
+
+[trained_models.fire.ssl4eo_MAE.ensemble.single]
+id = 'ssl4eo_MAE_ensemble_single'
+model_chkpt = ["best_model_38_2025-07-13-01-13/best_model_38_2025-07-13-01-13.pth"]
+
+[trained_models.fire.ssl4eo_MAE.ensemble.standard]
+id = 'ssl4eo_MAE_ensemble_standard'
+model_chkpt = [ "best_model_25_2025-07-09-11-53/best_model_25_2025-07-09-11-53.pth",
+        "best_model_46_2025-07-08-21-42/best_model_46_2025-07-08-21-42.pth",
+        "best_model_12_2025-07-13-16-32/best_model_12_2025-07-13-16-32.pth",
+        "best_model_38_2025-07-13-01-13/best_model_38_2025-07-13-01-13.pth",
+        "best_model_47_2025-07-14-01-39/best_model_47_2025-07-14-01-39.pth",
+        "best_model_11_2025-07-16-02-10/best_model_11_2025-07-16-02-10.pth",
+        "2025-07-18-02-55-16/best_model_27_2025-07-18-06-45/best_model_27_2025-07-18-06-45.pth",
+        "2025-07-17-23-03-23/best_model_36_2025-07-18-03-53/best_model_36_2025-07-18-03-53.pth",
+        "2025-07-17-22-41-09/best_model_31_2025-07-18-02-51/best_model_31_2025-07-18-02-51.pth",
+        "2025-07-17-19-56-57/best_model_15_2025-07-17-22-37/best_model_15_2025-07-17-22-37.pth",
+        "2025-07-17-19-43-20/best_model_20_2025-07-17-22-55/best_model_20_2025-07-17-22-55.pth",
+        "2025-07-17-17-04-16/best_model_16_2025-07-17-19-53/best_model_16_2025-07-17-19-53.pth",
+        "2025-07-17-16-50-02/best_model_16_2025-07-17-19-39/best_model_16_2025-07-17-19-39.pth"
+]
+
+[trained_models.fire.ssl4eo_MAE.ensemble.bootstrap]
+id = 'ssl4eo_MAE_ensemble_bootstrap'
+model_chkpt = [ "2025-07-18-08-47-28/best_model_47_2025-07-18-13-42/best_model_47_2025-07-18-13-42.pth",
+        "2025-07-18-08-52-24/best_model_34_2025-07-18-13-21/best_model_34_2025-07-18-13-21.pth",
+        "2025-07-18-08-52-33/best_model_29_2025-07-18-12-49/best_model_29_2025-07-18-12-49.pth",
+        "2025-07-18-08-52-34/best_model_28_2025-07-18-12-43/best_model_28_2025-07-18-12-43.pth",
+        "2025-07-18-08-52-46/best_model_49_2025-07-18-13-47/best_model_49_2025-07-18-13-47.pth",
+        "2025-07-18-08-53-03/best_model_20_2025-07-18-11-55/best_model_20_2025-07-18-11-55.pth",
+        "2025-07-18-08-53-08/best_model_26_2025-07-18-12-27/best_model_26_2025-07-18-12-27.pth",
+        "2025-07-18-08-53-56/best_model_44_2025-07-18-13-44/best_model_44_2025-07-18-13-44.pth",
+        "2025-07-18-08-54-38/best_model_47_2025-07-18-13-53/best_model_47_2025-07-18-13-53.pth",
+        "2025-07-18-08-59-41/best_model_45_2025-07-18-13-55/best_model_45_2025-07-18-13-55.pth"
+]
+
+
+[trained_models.fire.ssl4eo_MAE.ensemble_ft]
+checkpoint_path = "/home/kai-h/extremes-checkpoints/fully_finetune/vit_small_patch16_224_unet_segmentation/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation"
+mode = "fully_finetune"
+ssl_method = "MAE"
+
+[trained_models.fire.ssl4eo_MAE.ensemble_ft.single]
+id = 'ssl4eo_MAE_ensemble_ft_single'
+model_chkpt = ["fully_finetune_4/best_model.pth"]
+
+[trained_models.fire.ssl4eo_MAE.ensemble_ft.standard]
+id = 'ssl4eo_MAE_ensemble_ft_standard'
+model_chkpt = [
+         "fully_finetune_0/best_model.pth",
+         "fully_finetune_1/best_model.pth",
+         "fully_finetune_2/best_model.pth",
+         "fully_finetune_3/best_model.pth",
+         "fully_finetune_4/best_model.pth",
+         "fully_finetune_5/best_model.pth",
+         "fully_finetune_6/best_model.pth",
+         "fully_finetune_7/best_model.pth",
+         "fully_finetune_8/best_model.pth",
+         "fully_finetune_9/best_model.pth"]
+
+[trained_models.fire.ssl4eo_MAE.ensemble_ft.bootstrap]
+id = 'ssl4eo_MAE_ensemble_ft_bootstrap'
+model_chkpt = [
+         "fully_finetune_bootstrap_0/best_model.pth",
+         "fully_finetune_bootstrap_1/best_model.pth",
+         "fully_finetune_bootstrap_2/best_model.pth",
+         "fully_finetune_bootstrap_3/best_model.pth",
+         "fully_finetune_bootstrap_4/best_model.pth",
+         "fully_finetune_bootstrap_5/best_model.pth",
+         "fully_finetune_bootstrap_6/best_model.pth",
+         "fully_finetune_bootstrap_7/best_model.pth",
+         "fully_finetune_bootstrap_8/best_model.pth",
+         "fully_finetune_bootstrap_9/best_model.pth"]
+
+
+[trained_models.fire.ssl4eo_MAE.density]
+checkpoint_path = "/home/kai-h/extremes-checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation_density_head/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation_density_head"
+mode = "frozen_body"
+ssl_method = "MAE"
+
+[trained_models.fire.ssl4eo_MAE.density.prototype]
+id = 'ssl4eo_MAE_density_prototype'
+model_chkpt = "nodice_3/best_model.pth"
+
+
+[trained_models.fire.ssl4eo_MAE.dropout]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation_mc_dropout/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation_mc_dropout"
+mode = "frozen_body"
+ssl_method = "MAE"
+
+[trained_models.fire.ssl4eo_MAE.dropout.standard]
+id = 'ssl4eo_MAE_dropout_standard'
+# model_chkpt = "dice_1/best_model.pth" # fdl's checkpoint
+model_chkpt = "fire_frozen_body_MAE_MCDropout/best_model.pth" # maria's checkpoint renamed
+
+
+[trained_models.fire.ssl4eo_MAE.dropout_ft]
+checkpoint_path = "/home/kai-h/extremes-checkpoints/fully_finetune/vit_small_patch16_224_unet_segmentation_mc_dropout/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation_mc_dropout"
+mode = "fully_finetune"
+ssl_method = "MAE"
+
+[trained_models.fire.ssl4eo_MAE.dropout_ft.standard]
+id = 'ssl4eo_MAE_dropout_ft_standard'
+model_chkpt = "dice_mc_dropout_fully_finetune_3/best_model.pth"
+
+
+
+[trained_models.fire.ssl4eo_DINO]
+
+[trained_models.fire.ssl4eo_DINO.ensemble]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation"
+mode = "frozen_body"
+ssl_method = "DINO"
+
+[trained_models.fire.ssl4eo_DINO.ensemble.bootstrap]
+id = 'ssl4eo_DINO_ensemble_bootstrap'
+model_chkpt = [ 
+        "bootstrap_DINO_1/best_model.pth",
+        "bootstrap_DINO_2/best_model.pth",
+        "bootstrap_DINO_3/best_model.pth",
+        "bootstrap_DINO_4/best_model.pth",
+        "bootstrap_DINO_5/best_model.pth",
+        "bootstrap_DINO_6/best_model.pth",
+        "bootstrap_DINO_7/best_model.pth",
+        "bootstrap_DINO_8/best_model.pth",
+        "bootstrap_DINO_9/best_model.pth",
+        "bootstrap_DINO_10/best_model.pth"
+]
+
+[trained_models.fire.ssl4eo_DINO.ensemble.standard]
+id = 'ssl4eo_DINO_ensemble_standard'
+model_chkpt = [ 
+        "fire_frozen_body_DINO_0/best_model.pth",
+        "fire_frozen_body_DINO_1/best_model.pth",
+        "fire_frozen_body_DINO_2/best_model.pth",
+        "fire_frozen_body_DINO_3/best_model.pth",
+        "fire_frozen_body_DINO_4/best_model.pth",
+        "fire_frozen_body_DINO_5/best_model.pth",
+        "fire_frozen_body_DINO_6/best_model.pth",
+        "fire_frozen_body_DINO_7/best_model.pth",
+        "fire_frozen_body_DINO_8/best_model.pth",
+        "fire_frozen_body_DINO_9/best_model.pth",
+]
+
+[trained_models.fire.ssl4eo_DINO.dropout]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation_mc_dropout/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation_mc_dropout"
+mode = "frozen_body"
+ssl_method = "DINO"
+
+[trained_models.fire.ssl4eo_DINO.dropout.standard]
+id = 'ssl4eo_DINO_dropout_standard'
+model_chkpt = "fire_frozen_body_DINO_MCDropout/best_model.pth"
+
+
+
+[trained_models.fire.ssl4eo_MOCO]
+
+[trained_models.fire.ssl4eo_MOCO.ensemble]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation"
+mode = "frozen_body"
+ssl_method = "MOCO"
+
+[trained_models.fire.ssl4eo_MOCO.ensemble.standard]
+id = 'ssl4eo_MOCO_ensemble_standard'
+model_chkpt = [ 
+        "fire_frozen_body_0/best_model.pth",
+        "fire_frozen_body_1/best_model.pth",
+        "fire_frozen_body_2/best_model.pth",
+        "fire_frozen_body_3/best_model.pth",
+        "fire_frozen_body_4/best_model.pth",
+        "fire_frozen_body_5/best_model.pth",
+        "fire_frozen_body_6/best_model.pth",
+        "fire_frozen_body_7/best_model.pth",
+        "fire_frozen_body_8/best_model.pth",
+        "fire_frozen_body_9/best_model.pth"
+]
+
+[trained_models.fire.ssl4eo_MOCO.ensemble.bootstrap]
+id = 'ssl4eo_MOCO_ensemble_bootstrap'
+model_chkpt = [ 
+        "bootstrap_MOCO_1/best_model.pth",
+        "bootstrap_MOCO_2/best_model.pth",
+        "bootstrap_MOCO_3/best_model.pth",
+        "bootstrap_MOCO_4/best_model.pth",
+        "bootstrap_MOCO_5/best_model.pth",
+        "bootstrap_MOCO_6/best_model.pth",
+        "bootstrap_MOCO_7/best_model.pth",
+        "bootstrap_MOCO_8/best_model.pth",
+        "bootstrap_MOCO_9/best_model.pth",
+        "bootstrap_MOCO_10/best_model.pth"
+]
+
+[trained_models.fire.ssl4eo_MOCO.dropout]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation_mc_dropout/fire/"
+model_name = "vit_small_patch16_224_unet_segmentation_mc_dropout"
+mode = "frozen_body"
+ssl_method = "MOCO"
+
+[trained_models.fire.ssl4eo_MOCO.dropout.standard]
+id = 'ssl4eo_MOCO_dropout_standard'
+model_chkpt = "fire_frozen_body_MCDropout/best_model.pth"
+
+
+
+[trained_models.fire.terramind]
+
+[trained_models.fire.terramind.ensemble]
+checkpoint_path = "/home/kai-h/extremes-checkpoints/frozen_body/terramind_first_experiments/fire/"
+mode = "frozen_body"
+ssl_method = ""
+
+[trained_models.fire.terramind.ensemble.standard]
+id = 'terramind_ensemble_standard'
+[ensemble.terramind]
+models = [
+        '2025-07-24-12-59-36/best_model_30.pth',
+        '2025-07-24-12-18-55/best_model_19.pth',
+        '2025-07-24-12-18-36/best_model_37.pth',
+        '2025-07-24-12-18-16/best_model_27.pth',
+        '2025-07-24-12-18-04/best_model_14.pth',
+        '2025-07-24-12-17-52/best_model_19.pth',
+        '2025-07-24-12-10-40/best_model_37.pth',
+        '2025-07-24-12-10-26/best_model_14.pth',
+        '2025-07-24-12-10-25/best_model_11.pth',
+        '2025-07-23-17-52-23/best_model_42.pth',
+]
+
+
+[trained_models.flood]
+
+[trained_models.flood.ssl4eo_MAE]
+
+[trained_models.flood.ssl4eo_MAE.ensemble]
+checkpoint_path = "/home/maria/extremes-checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation/flood/"
+model_name = "vit_small_patch16_224_unet_segmentation"
+mode = "frozen_body"
+ssl_method = "MAE"
+
+[trained_models.flood.ssl4eo_MAE.ensemble.single]
+id = 'ssl4eo_MAE_ensemble_single'
+model_chkpt = ["dice_mc_dropout_frozen_body_1/best_model.pth"]
+
+[trained_models.flood.ssl4eo_MOCO]
+
+[trained_models.flood.ssl4eo_MOCO.ensemble]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation/flood/"
+model_name = "vit_small_patch16_224_unet_segmentation"
+mode = "frozen_body"
+ssl_method = "MOCO"
+
+[trained_models.flood.ssl4eo_MOCO.ensemble.single]
+id = 'ssl4eo_MOCO_ensemble_single'
+model_chkpt = ["floods_frozen_body_bootstrap_3/best_model.pth"]
+
+[trained_models.flood.ssl4eo_MOCO.ensemble.debug]
+id = 'ssl4eo_MOCO_ensemble_debug'
+model_chkpt = [ 'floods_frozen_body_bootstrap_0/best_model.pth',
+                'floods_frozen_body_bootstrap_1/best_model.pth']
+
+[trained_models.flood.ssl4eo_MOCO.ensemble.standard]
+id = 'ssl4eo_MOCO_ensemble_standard'
+model_chkpt = [ 'flood_frozen_body_0/best_model.pth',
+                'flood_frozen_body_1/best_model.pth',
+                'flood_frozen_body_2/best_model.pth',
+                'flood_frozen_body_3/best_model.pth',
+                'flood_frozen_body_4/best_model.pth',
+                'flood_frozen_body_5/best_model.pth',
+                'flood_frozen_body_6/best_model.pth',
+                'flood_frozen_body_7/best_model.pth',
+                'flood_frozen_body_8/best_model.pth',
+                'flood_frozen_body_9/best_model.pth']
+
+[trained_models.flood.ssl4eo_MOCO.ensemble.bootstrap]
+id = 'ssl4eo_MOCO_ensemble_bootstrap'
+model_chkpt = [
+                'floods_frozen_body_bootstrap_0/best_model.pth',
+                'floods_frozen_body_bootstrap_1/best_model.pth',
+                'floods_frozen_body_bootstrap_2/best_model.pth',
+                'floods_frozen_body_bootstrap_3/best_model.pth',
+                'floods_frozen_body_bootstrap_4/best_model.pth',
+                'floods_frozen_body_bootstrap_5/best_model.pth',
+                'floods_frozen_body_bootstrap_6/best_model.pth',
+                'floods_frozen_body_bootstrap_7/best_model.pth',
+                'floods_frozen_body_bootstrap_8/best_model.pth',
+                'floods_frozen_body_bootstrap_9/best_model.pth'
+]
+
+
+[trained_models.flood.ssl4eo_MOCO.dropout]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation_mc_dropout/flood/"
+model_name = "vit_small_patch16_224_unet_segmentation_mc_dropout"
+mode = "frozen_body"
+ssl_method = "MOCO"
+
+[trained_models.flood.ssl4eo_MOCO.dropout.standard]
+id = 'ssl4eo_MOCO_dropout_standard'
+model_chkpt = "vertex-fm-training-job-flood-frozen_body-dropout-MOCO-patrick/best_model.pth"
+
+[trained_models.landslide]
+
+[trained_models.landslide.ssl4eo_MOCO]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation/landslide/"
+model_name = "vit_small_patch16_224_unet_segmentation"
+mode = "frozen_body"
+ssl_method = "MOCO"
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single]
+id = 'ssl4eo_MOCO_ensemble_single'
+model_chkpt = ["landslide_frozen_body_0_aug/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.standard]
+id = 'ssl4eo_MOCO_ensemble_standard'
+model_chkpt = ["landslide_frozen_body_0/best_model.pth",
+                "landslide_frozen_body_1/best_model.pth",
+                "landslide_frozen_body_2/best_model.pth",
+                "landslide_frozen_body_3/best_model.pth",
+                "landslide_frozen_body_4/best_model.pth",
+                "landslide_frozen_body_5/best_model.pth",
+                "landslide_frozen_body_6/best_model.pth",
+                "landslide_frozen_body_7/best_model.pth",
+                "landslide_frozen_body_8/best_model.pth",
+                "landslide_frozen_body_9/best_model.pth",                
+]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.bootstrap]
+id = 'ssl4eo_MOCO_ensemble_bootstrap'
+model_chkpt = ["landslide_frozen_body_bootstrap_0/best_model.pth",
+                "landslide_frozen_body_bootstrap_1/best_model.pth",
+                "landslide_frozen_body_bootstrap_2/best_model.pth",
+                "landslide_frozen_body_bootstrap_3/best_model.pth",
+                "landslide_frozen_body_bootstrap_4/best_model.pth",
+                "landslide_frozen_body_bootstrap_5/best_model.pth",
+                "landslide_frozen_body_bootstrap_6/best_model.pth",
+                "landslide_frozen_body_bootstrap_7/best_model.pth",
+                "landslide_frozen_body_bootstrap_8/best_model.pth",
+                "landslide_frozen_body_bootstrap_9/best_model.pth",                 
+]
+
+[trained_models.landslide.ssl4eo_MOCO.dropout]
+checkpoint_path = "/data/users/maria/shrug-fm/checkpoints/frozen_body/vit_small_patch16_224_unet_segmentation_mc_dropout/landslide/"
+model_name = "vit_small_patch16_224_unet_segmentation_mc_dropout"
+mode = "frozen_body"
+ssl_method = "MOCO"
+
+[trained_models.landslide.ssl4eo_MOCO.dropout.standard]
+id = 'ssl4eo_MOCO_dropout_standard'
+model_chkpt = "landslide_frozen_body_MCDropout_good/best_model.pth"
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_0]
+id = 'ssl4eo_MOCO_ensemble_single_0'
+model_chkpt = ["landslide_frozen_body_0/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_1]
+id = 'ssl4eo_MOCO_ensemble_single_1'
+model_chkpt = ["landslide_frozen_body_1/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_2]
+id = 'ssl4eo_MOCO_ensemble_single_2'
+model_chkpt = ["landslide_frozen_body_2/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_3]
+id = 'ssl4eo_MOCO_ensemble_single_3'
+model_chkpt = ["landslide_frozen_body_3/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_4]
+id = 'ssl4eo_MOCO_ensemble_single_4'
+model_chkpt = ["landslide_frozen_body_4/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_5]
+id = 'ssl4eo_MOCO_ensemble_single_5'
+model_chkpt = ["landslide_frozen_body_5/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_6]
+id = 'ssl4eo_MOCO_ensemble_single_6'
+model_chkpt = ["landslide_frozen_body_6/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_7]
+id = 'ssl4eo_MOCO_ensemble_single_7'
+model_chkpt = ["landslide_frozen_body_7/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_8]
+id = 'ssl4eo_MOCO_ensemble_single_8'
+model_chkpt = ["landslide_frozen_body_8/best_model.pth"]
+
+[trained_models.landslide.ssl4eo_MOCO.ensemble.single_9]
+id = 'ssl4eo_MOCO_ensemble_single_9'
+model_chkpt = ["landslide_frozen_body_9/best_model.pth"]
