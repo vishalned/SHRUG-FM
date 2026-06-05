@@ -27,9 +27,9 @@ from ml4floods.preprocess.tiling import (
 from ml4floods.preprocess.worldfloods import normalize as wf_normalization
 from ml4floods.preprocess.worldfloods import prepare_patches
 
-from fm_extremes_uncertainty.dataset.floods import transformations
-from fm_extremes_uncertainty.dataset.floods.lightning import WorldFloodsDataModule
-from fm_extremes_uncertainty.utils.logging_utils import get_logger_initialized
+from signal_task.dataset.floods import transformations
+from signal_task.dataset.floods.lightning import WorldFloodsDataModule
+from signal_task.utils.logging_utils import get_logger_initialized
 
 
 def filenames_train_test_split(
@@ -231,7 +231,7 @@ def get_dataset(
             data_config: data settings (settings.dataloader)
                 should have a field train_test_split_file that points to the .json
                 that is output from running
-                fm_extremes_uncertainty.dataset.floods.utils.convert_metadata_csv_to_json
+                signal_task.dataset.floods.utils.convert_metadata_csv_to_json
                 on the metadata.csv from huggingface.
             data_path: path to raw_downstream/ folder in mounted data bucket,
                 e.g. /gcs/2025-esl-extreme-environments-raw-data/raw_downstream/

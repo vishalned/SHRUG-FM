@@ -8,7 +8,7 @@ from rasterio.windows import from_bounds
 import cv2
 from typing import Union
 
-from fm_extremes_uncertainty.config.settings import settings
+from config.settings import settings
 
 class LandslidesDataset(torch.utils.data.Dataset):
     def __init__(

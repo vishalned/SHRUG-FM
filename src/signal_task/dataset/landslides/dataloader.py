@@ -1,8 +1,8 @@
 import torch
 from torch.utils.data import DataLoader
 
-from fm_extremes_uncertainty.config.settings import settings
-from fm_extremes_uncertainty.dataset.landslides.dataset import LandslidesDataset
+from config.settings import settings
+from signal_task.dataset.landslides.dataset import LandslidesDataset
 
 
 class LandslidesDataloader:

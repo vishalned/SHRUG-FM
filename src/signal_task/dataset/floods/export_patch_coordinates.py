@@ -2,12 +2,12 @@ from ml4floods.data.worldfloods.configs import CHANNELS_CONFIGURATIONS
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 
-from fm_extremes_uncertainty.dataset.floods import transformations
-from fm_extremes_uncertainty.dataset.floods.dataset_setup import (
+from signal_task.dataset.floods import transformations
+from signal_task.dataset.floods.dataset_setup import (
     filter_windows_fun,
     process_filename_train_test,
 )
-from fm_extremes_uncertainty.dataset.floods.lightning import WorldFloodsDataModule
+from signal_task.dataset.floods.lightning import WorldFloodsDataModule
 
 download = {"train": False, "val": False, "test": False}
 path_to_splits = "/home/rubencartuyvels/buckets/raw-data-2/raw_downstream/floods/worldfloods_v2/"

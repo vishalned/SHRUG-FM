@@ -7,8 +7,8 @@ sys.path.insert(0, "/home/EarthExtreme-Bench")  # fmt: skip
 import torch
 from torch.utils.data import DataLoader
 
-from fm_extremes_uncertainty.config.settings import settings
-from fm_extremes_uncertainty.utils.data_loader_utils import DataLoaderType
+from config.settings import settings
+from signal_task.utils.data_loader_utils import DataLoaderType
 
 
 class DataPrefetcher:
