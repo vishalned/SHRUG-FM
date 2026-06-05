@@ -13,7 +13,7 @@ import rasterio
 import torch
 from PIL import Image
 
-from fm_extremes_uncertainty.config.settings import settings
+from config.settings import settings
 
 
 class BaseMultispectralDataset(torch.utils.data.Dataset):

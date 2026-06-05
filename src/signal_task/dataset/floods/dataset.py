@@ -22,7 +22,7 @@ from shapely.geometry import box
 from shapely.ops import transform
 from torch.utils.data import Dataset
 
-from fm_extremes_uncertainty.utils.logging_utils import get_logger_initialized
+from signal_task.utils.logging_utils import get_logger_initialized
 
 
 def resize_img(x: torch.Tensor, window_size: int) -> torch.Tensor:

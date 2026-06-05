@@ -9,8 +9,8 @@ from ml4floods.data.worldfloods.configs import BANDS_S2
 from ml4floods.preprocess.tiling import WindowSize, WindowSlices, get_window_tiles
 from torch.utils.data import DataLoader
 
-from fm_extremes_uncertainty.dataset.floods.dataset import WorldFloodsDatasetTiled
-from fm_extremes_uncertainty.utils.logging_utils import get_logger_initialized
+from signal_task.dataset.floods.dataset import WorldFloodsDatasetTiled
+from signal_task.utils.logging_utils import get_logger_initialized
 
 """
 Copy-paste from ml4floods with small adjustments
